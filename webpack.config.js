@@ -3,7 +3,7 @@ const src_dir = path.join(__dirname, '/public', '/src');
 const dist_dir = path.join(__dirname, 'public', 'dist');
 
 module.exports = {
-  entry: path.join(src_dir, 'App.jsx'),
+  entry: path.join(src_dir, 'index.jsx'),
   output: {
     path: dist_dir,
     filename: 'bundle.js',
