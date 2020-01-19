@@ -1,0 +1,31 @@
+const mongoose = require('mongoose');
+const db = require('./index.js');
+// mongoose.Promise = global.Promise;
+
+const restaurantSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  rating: {
+    type: Number
+  },
+  reviewCount: {
+    type: Number
+  },
+  cost: {
+    type: String
+  },
+  keyDesc: {
+    type: [String]
+  },
+  description: {
+    type: String
+  }
+})
+
+const Restaurant = mongoose.model('Restaurant', restaurantSchema)
+
+
+module.exports = Restaurant;
