@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
-const db = require('./index.js');
-// mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 const restaurantSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
     unique: true
+  },
+  uid: {
+    type: Number
   },
   rating: {
     type: Number
