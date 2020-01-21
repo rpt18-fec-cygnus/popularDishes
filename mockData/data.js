@@ -8,7 +8,8 @@ const restaurantSchema = new mongoose.Schema({
     unique: true
   },
   uid: {
-    type: Number
+    type: Number,
+    unique: true
   },
   rating: {
     type: Number
