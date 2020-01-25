@@ -14,11 +14,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    //get request using axios for restaurant info once component mounts
     axios.get('/restaurantInfo')
       .then((res) => {
         this.setState(res.data)
+        return res.data
       })
       .catch(err => console.log(err))
+      .then((data) => console.log(data.keyDesc))
   }
 
   render() {
