@@ -32,7 +32,7 @@ class App extends React.Component {
         {/* <MainInfo data={this.props.sampleData} /> */}
         <MainInfo data={this.state} />
         <div>
-          <Button>Write a Review</Button>
+          <Button><strong>Write a Review</strong></Button>
           <Button secondary>Add Photo</Button>
           <Button secondary>Share</Button>
           <Button secondary>Save</Button>
